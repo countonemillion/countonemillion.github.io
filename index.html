@@ -4,7 +4,7 @@
             body {
                 background-color:#000000;
             }
-            * {
+            #body {
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -16,10 +16,19 @@
     </head>
     <body>
         <script>
-            start=1548191502-990000;
+            /*
+            Count One Million
+            Please don't break stuff!
+            */
+            start=1548191502;
+            function update() {
+                document.getElementById("in").innerHTML = ((Math.floor(Date.now() / 1000)-start)%1000000).toString()
+            }
+            setInterval(update, 1000);
         </script>
         <div id="body">
-            <p style="font-family: helvetica; font-size:24; top:50%; left:50%; color:white">SITE CONSTRUCTION IN PROGRESS.</p>
+            <center><p style="font-family: sans; font-size:48; top:50%; left:50%; color:white" id="in">SITE CONSTRUCTION IN PROGRESS.</p></center>
+            <p style="font-family: sans; font-size:8; top:50%; left:50%; color:white">Count One Million, no bullcrap, just a counter to 1,000,000. Enjoy!</p>
         </div>
     </body>
 </html>
